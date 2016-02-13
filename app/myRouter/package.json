@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express":"",
+    "client-sessions":"",
+    "body-parser":""
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="Advance" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advance</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/usersService.js"></script>
+    <script src="js/challengeService.js"></script>
+    <script src="js/lpService.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-yeti.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nga.min.css">
+    <link href='css/f1.css' rel='stylesheet' type='text/css'>
+    <link href='css/f2.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="page-top" >
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand page-scroll" href="/#/">Advance</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/#/User/{{UserState}}" ng-show="UserState">{{UserState}}<span class="badge">{{UnreadMessagesCount}}</span></a></li>
+            <li><a href="/#/Search">Search</a></li>
+            <li><a href="/#/AllChallenges">View Challenges</a></li>
+            <li><a href="/#/AllUsers">All Users</a></li>
+            <li><a href="/#/AddLP" ng-show="UserState">Add Learning Path</a></li>
+            <li><a href="/#/AddChallenge" ng-show="UserTypeauth()">Add Challenge</a></li>
+            <li><a href="/#/AllReports" ng-show="UserTypeauth()">View Reports</a></li>
+            <li><a ng-hide="UserState" href="/#/Login">Login</a></li>
+            <li><a href="/#/Register" ng-hide="UserState">Register</a></li>
+            <li><a ng-show="UserState" href="/#/Logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div ng-view class="view-slide-in {{header}}">
+
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/creative.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+</body>
+
+</html>
